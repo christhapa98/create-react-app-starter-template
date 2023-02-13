@@ -1,4 +1,5 @@
 import axios from "axios";
+import { endpoints } from "../../constants/endpoints"
 
 /**
  * Description
@@ -7,7 +8,7 @@ import axios from "axios";
  */
 export const httpLogin = async ({ formData }) => {
     try {
-        const response = await axios.post("", formData)
+        const response = await axios.post(endpoints.httpLoginUrl, formData)
         if (response) return { data: response }
         else return { error: response.data.message }
     } catch (error) {
