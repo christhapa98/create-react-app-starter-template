@@ -1,7 +1,8 @@
 import React from "react";
+import MainRoutes from './routes/Routes'
 
 const App = () => {
-    return <div>My CRA template</div>;
+    return <MainRoutes />;
 };
 
 export default App;
