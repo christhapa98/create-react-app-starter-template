@@ -16,17 +16,21 @@ export default function MainRoutes() {
         <Routes>
             <Route path="/login" element={<Login />} />
             {/* Admin routes */}
-            <Route path={adminBaseRoute} element={
+            <Route path={adminBaseRoute + "*"} element={
                 <AdminContextComponent>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="/users" element={<Users />} />
-                    <Route path="/settings" element={<Settings />} />
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/users" element={<Users />} />
+                        <Route path="/settings" element={<Settings />} />
+                    </Routes>
                 </AdminContextComponent>
             } />
             {/* Client routes */}
-            <Route path={clientBaseRoute} element={
+            <Route path={clientBaseRoute + "*"} element={
                 <AdminContextComponent>
-                    <Route path="/" element={<Home />} />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
                 </AdminContextComponent>
             } />
         </Routes>

@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { createContext } from 'react'
 import AdminLayout from '../components/layouts/AdminLayout/AdminLayout';
 
-export const AppContext = useContext({});
+export const AppContext = createContext({});
 
 export default function AdminContextComponent({ children }) {
     return (
