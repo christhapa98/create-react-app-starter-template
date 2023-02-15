@@ -20,6 +20,10 @@ Context API: A way to pass data through the component tree without having to pas
 Project Structure
 This template provides a basic project structure with some sample components, including:
 
+A Header component with a responsive navigation menu.
+A Home component with a welcome message and a button to open a modal.
+A Modal component that uses React-Modal to display a form for submitting feedback.
+A Footer component with social media links.
 Customization
 You can customize this template to suit your needs by modifying the existing components or adding new ones. You can also modify the styles by editing the tailwind.config.js file or by creating your own CSS files.
 
