@@ -1,4 +1,5 @@
 //Lazy importing LoginForm
+import React from 'react';
 const LoginForm = React.lazy(() => import('./LoginForm'));
 
 export default function LoginComponent() {
