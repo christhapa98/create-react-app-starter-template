@@ -3,7 +3,7 @@ import { adminSidebarItems } from '../../../constants/sidebarItems';
 
 export default function Sidebar({ minimize, setMinimize }) {
     return (
-        <div className={`fixed hidden md:hidden lg:block bg-green-800 overflow-y-auto left-0 ${minimize ? "md:w-24" : "md:w-64"}  h-screen transition-all duration-300 border-none z-10 sidebar`}>
+        <div className={`fixed hidden md:hidden lg:block bg-green-800 overflow-y-auto overflow-x-hidden left-0 ${minimize ? "md:w-24" : "md:w-64"}  h-screen transition-all duration-300 border-none z-10 sidebar`}>
             {!minimize && <Title />}
             <HamburgerIcon minimize={minimize} setMinimize={setMinimize} />
             <div className="flex flex-col justify-between h-full gap-5 pt-24">
@@ -12,9 +12,10 @@ export default function Sidebar({ minimize, setMinimize }) {
                     <button className={`flex gap-2 p-2 rounded-lg hover:bg-white hover:text-red-500 `}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
-                        </svg> {!minimize && "Logout"}
+                        </svg>
+                        <span className='transition  duration-100 '>{!minimize && "Logout"}</span>
                     </button>
-                    <>@2023</>
+                    <>{new Date().getFullYear()}</>
                 </div>
             </div>
         </div>
