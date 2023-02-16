@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { TextInputLabel } from "./TextInput"
-import TextFieldError from "../TextField/TextFieldError";
+import { TextInputLabel, } from "./TextInput"
+import InputError from "./InputError";
 import { eye, eyeSlash } from "../icons";
 
 export default function PasswordField({
@@ -9,7 +9,7 @@ export default function PasswordField({
     value,
     onChange,
     required,
-    className,
+    disabled,
     errors
 }) {
     const [show, setShow] = useState(false);
@@ -31,7 +31,7 @@ export default function PasswordField({
                     className="w-full h-10 pr-12 text-gray-900 placeholder-transparent border border-gray-400 focus:border-gray-400 peer rounded-md px-2 focus:border-purple-600 focus:outline-none"
                 />
                 {label && (
-                    <TextFieldLabel label={label} name={name} />
+                    <TextInputLabel label={label} name={name} />
                 )}
 
                 <div className="p-2 h-full border-l border-stone-900 flex items-center justify-center absolute top-0 right-0" onClick={handleToggle}>
@@ -41,7 +41,7 @@ export default function PasswordField({
                 </div>
 
             </div>
-            {errors && <TextFieldError error={errors} />}
+            {errors && <InputError error={errors} />}
         </div>
     );
 }

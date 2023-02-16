@@ -1,19 +1,19 @@
 /**
- * Description
+ * Check Session as per sessionKey , returns session or null;
  * Return session or null
  * @returns {string | null}
  */
-export const checkSession = () => {
-    const session = localStorage.getItem("");
+export const checkSession = (sessionKey) => {
+    const session = localStorage.getItem(sessionKey);
     if (session) return session
-    else return null;
+    return null;
 }
 
 /**
  * Description
  * @returns {boolean}
  */
-export const clearSession = () => {
-    localStorage.removeItem("")
+export const clearSession = (sessionKey) => {
+    localStorage.removeItem(sessionKey)
     return true;
 }
