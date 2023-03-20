@@ -7,7 +7,7 @@ This is a starter template project created as a part of Create React App (CRA), 
 To create a new project using this template, you can run the following command:
 
 ```bash
-npx create-react-app my-app --template starter-react-tailwindcdd
+npx create-react-app my-app --template starter-react-tailwindcss
 
 ## Features
 This template includes the following features:
